@@ -13,10 +13,9 @@ const errorMiddleware = require("./middlewares/errors");
 
 app.use(
   cors({
-    // origin: "https://genie-food-app.netlify.app",
     origin: process.env.FRONTEND_URL,
     credentials: true,
-  }),
+  })
 );
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
